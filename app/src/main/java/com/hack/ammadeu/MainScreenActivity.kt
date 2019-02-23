@@ -29,12 +29,12 @@ class MainScreenActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
 
         init()
 
-        /*if (fragmentManager.fragments.isEmpty()) {
+        if (fragmentManager.fragments.isEmpty()) {
             val fragment = FragmentProcess.newInstance()
             replaceFragment(fragment)
         } else {
             replaceFragment(fragmentManager.fragments.last())
-        }*/
+        }
     }
 
 
@@ -46,7 +46,6 @@ class MainScreenActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
         toogle.syncState()
         navigation_view.setNavigationItemSelectedListener(this)
     }
-
 
     private fun replaceFragment(fragment: Fragment) {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
@@ -60,13 +59,13 @@ class MainScreenActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
         when (item.itemId) {
             R.id.action_home -> {
                 fragmentManager.popBackStack("home", fragmentManager.backStackEntryCount + 1)
-                fragmentManager.beginTransaction().replace(R.id.fragment_main_screen, FragmentProcess()).commit()
+                fragmentManager.beginTransaction().replace(R.id.fragment_main_screen, FragmentHome()).commit()
             }
             R.id.action_about_us -> {
                 fragmentManager.popBackStack("about", fragmentManager.backStackEntryCount + 1)
                 fragmentManager.beginTransaction().replace(R.id.fragment_main_screen, FragmentAbout()).commit()
-            }
-            /*R.id.action_upload -> {
+            }/*
+            R.id.action_upload -> {
                 val intent = Intent(applicationContext, UploadActivity::class.java)
                 startActivity(intent)
             }*/

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools" package="com.hack.ammadeu">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.hack.ammadeu">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -12,6 +13,12 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ProcessDetailActivity">
+        </activity>
+        <activity android:name=".SignUpActivity">
+        </activity>
+        <activity android:name=".LoginActivity">
+        </activity>
         <activity android:name=".MainScreenActivity">
         </activity>
         <activity android:name=".MainActivity">

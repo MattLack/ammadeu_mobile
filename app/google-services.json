@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "307788176529",
+    "firebase_url": "https://ammadeu-ec0d9.firebaseio.com",
+    "project_id": "ammadeu-ec0d9",
+    "storage_bucket": "ammadeu-ec0d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307788176529:android:afe50e011710b4aa",
+        "android_client_info": {
+          "package_name": "com.hack.ammadeu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307788176529-tobra6eqakmrkg9lurtd0sij4ho5v1l9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hack.ammadeu",
+            "certificate_hash": "9a2533323f294a7a12071bc10c06a973b09ab0a2"
+          }
+        },
+        {
+          "client_id": "307788176529-dl3av0551boi4mgmr6j33157ggr4jgka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5_LFdY559Q_BjKHaHHQAmi9Kdulyllrg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307788176529-dl3av0551boi4mgmr6j33157ggr4jgka.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
