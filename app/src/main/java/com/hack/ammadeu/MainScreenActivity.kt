@@ -29,12 +29,12 @@ class MainScreenActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
 
         init()
 
-        if (fragmentManager.fragments.isEmpty()) {
+        /*if (fragmentManager.fragments.isEmpty()) {
             val fragment = FragmentProcess.newInstance()
             replaceFragment(fragment)
         } else {
             replaceFragment(fragmentManager.fragments.last())
-        }
+        }*/
     }
 
 

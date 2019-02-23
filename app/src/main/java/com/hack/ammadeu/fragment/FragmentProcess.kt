@@ -42,7 +42,7 @@ class FragmentProcess : Fragment() {
             val url = "https://api.exchangeratesapi.io/latest?symbols="
 
             val sb = StringBuilder()
-            sb.append(url).append(textBase).append(",").append(textConvert)
+            //sb.append(url).append(textBase).append(",").append(textConvert)
             val c = sb.toString()
 
             downloadData.execute(c)
