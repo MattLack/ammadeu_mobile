@@ -26,6 +26,7 @@ class LoginActivity : AppCompatActivity() {
     val RC_SIGN_IN: Int = 1
     lateinit var mGoogleSignInClient: GoogleSignInClient
     lateinit var mGoogleSignInOptions: GoogleSignInOptions
+    val ID_WEB: String = "307788176529-tobra6eqakmrkg9lurtd0sij4ho5v1l9.apps.googleusercontent.com"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
         mAuthListener = FirebaseAuth.AuthStateListener { }
 
         mGoogleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestIdToken(ID_WEB)
             .requestEmail()
             .build()
 
