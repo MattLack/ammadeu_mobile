@@ -11,7 +11,7 @@ import android.widget.TextView
 import com.squareup.picasso.Picasso
 
 class ProcessAdapter (
-    private val demandList: MutableList<Process>,
+    private val processList: MutableList<Process>,
     private val context: Context
 ) : RecyclerView.Adapter<ProcessAdapter.ViewHolder>() {
 
@@ -20,6 +20,8 @@ class ProcessAdapter (
 
         return ViewHolder(view)
     }
+
+
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
         val note = demandList[p1]

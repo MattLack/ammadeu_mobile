@@ -8,6 +8,11 @@
                 app:showAsAction="collapseActionView"/>
 
         <item
+                android:id="@+id/action_Submit"
+                android:title="submit"
+                app:showAsAction="collapseActionView"/>
+
+        <item
                 android:id="@+id/action_about_us"
                 android:title="about"
                 app:showAsAction="collapseActionView"/>
