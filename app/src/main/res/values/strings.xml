@@ -7,4 +7,8 @@
     <string name="btnlogin">Log In</string>
     <string name="tv_loginhere">Login</string>
     <string name="forgot_password">Forgot Password</string>
+    <string name="btn_cadastr">Cadastrar</string>
+    <string name="tvconfirm_password">Confirm Password</string>
+    <string name="tvsign_up">Sign Up</string>
+    <string name="next">Next</string>
 </resources>

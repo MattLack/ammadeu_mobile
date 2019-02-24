@@ -8,7 +8,7 @@
         android:alpha="1"
         tools:context=".SignUpActivity">
 
-    <EditText
+    <AutoCompleteTextView
             android:layout_width="395dp"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
@@ -20,7 +20,7 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
             app:layout_constraintHorizontal_bias="1.0" android:layout_marginTop="50dp"
             app:layout_constraintTop_toBottomOf="@+id/textView"/>
-    <EditText
+    <AutoCompleteTextView
             android:layout_width="395dp"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -32,7 +32,7 @@
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/txtpass"
             app:layout_constraintHorizontal_bias="0.0"/>
-    <EditText
+    <AutoCompleteTextView
             android:layout_width="395dp"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -46,13 +46,13 @@
             app:layout_constraintTop_toBottomOf="@+id/txtemail" app:layout_constraintHorizontal_bias="0.0"/>
 
     <Button
-            android:text="@string/tvsign_up"
+            android:text="@string/next"
             android:layout_width="290dp"
             android:layout_height="47dp"
             android:id="@+id/btn_signup"
             android:textStyle="bold"
-            android:textColor="#ffffff"
-            android:background="@drawable/buttonshapecollor"
+            android:textColor="@color/main_color"
+            android:background="@drawable/button_shape_round"
             android:onClick="signUp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
@@ -60,6 +60,7 @@
             app:layout_constraintTop_toBottomOf="@+id/txtconfirmpass" app:layout_constraintHorizontal_bias="0.495"
             android:layout_marginBottom="3dp" app:layout_constraintBottom_toTopOf="@+id/btncadastr"
             app:layout_constraintVertical_bias="0.812"/>
+
     <com.google.android.gms.common.SignInButton
             android:text="@string/btnsign_up_with_google"
             android:textColor="#5555ff"
@@ -67,7 +68,7 @@
             android:layout_width="246dp"
             android:layout_height="63dp"
             android:id="@+id/btncadastr"
-            android:drawableLeft="@drawable/icons8google48"
+            android:drawableEnd="@drawable/icons8google48"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
@@ -78,12 +79,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:text="@string/tvsign_up"
             android:layout_marginTop="30dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtemail"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:background="@color/secondary_color"
+            android:layout_height="1px" android:id="@+id/textView2" app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="14dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/txtemail"/>
 
 
