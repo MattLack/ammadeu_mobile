@@ -14,6 +14,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.hack.ammadeu.MainScreenActivity
 import com.hack.ammadeu.R
 import com.hack.ammadeu.adapter.ProcessAdapter
+import com.hack.ammadeu.model.Process
+import kotlinx.android.synthetic.main.list_layout.*
 
 class FragmentProcess : Fragment() {
 
@@ -42,15 +44,18 @@ class FragmentProcess : Fragment() {
                     for (doc in task.result!!) {
 
                         val t = doc.data as HashMap<String, String>
-                        val note = Process(t["imgUrl"], t["txt"], t["userEmail"], t["id"])
+                        val note = Process(t["processNumber"], t["daysRamaining"], t["publicationDate"], t["priorityGrade"],
+                            t["clientName"], t["discrimination"], t["opponent"], t["task"] )
+
+
                         notesList.add(note)
                     }
 
                     mAdapter = ProcessAdapter(notesList, requireContext())
                     val mLayoutManager = LinearLayoutManager(requireContext())
-                    list_home.layoutManager = mLayoutManager
-                    list_home.itemAnimator = DefaultItemAnimator()
-                    list_home.adapter = mAdapter
+                    list_process.layoutManager = mLayoutManager
+                    list_process.itemAnimator = DefaultItemAnimator()
+                    list_process.adapter = mAdapter
                 } else {
                     Log.d(TAG, "Error getting documents: ", task.exception)
                 }
