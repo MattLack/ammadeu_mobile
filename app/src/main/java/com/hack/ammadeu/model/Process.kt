@@ -1,4 +1,6 @@
 package com.hack.ammadeu.model
 
-class Process {
-}
+data class Process (val processNumber: String?, val daysRamaining: String?,
+                    val publicationDate: String?, val priorityGrade: String?,
+                    val clientName: String?,
+                    val discrimination: String?, val opponent: String?, val task: String?)

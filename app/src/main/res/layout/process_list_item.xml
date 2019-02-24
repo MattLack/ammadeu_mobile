@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:id="@+id/demand_card"
+        android:layout_height="wrap_content">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                              android:layout_width="match_parent"
                                              android:layout_height="wrap_content"
@@ -30,14 +37,14 @@ android:layout_gravity="end">
             <TextView android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:id="@+id/process_number"
-                      android:text="Número do processo"
+                      android:text="Número do processo: "
                       android:layout_margin="5dp"/>
 
             <TextView android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:id="@+id/publication_date"
                       android:layout_gravity="end|center"
-                      android:text="Data Publicação"
+                      android:text="Data Publicação: "
                       android:layout_margin="5dp"/>
 
 
@@ -53,6 +60,7 @@ android:layout_gravity="end">
               android:textSize="30sp"
               android:paddingEnd="17dp"
               android:paddingStart="17dp"
+              android:id="@+id/days_ramaining"
               android:textAlignment="center"
               android:layout_gravity="center"
               android:padding="13dp"
@@ -61,3 +69,4 @@ android:layout_gravity="end">
 
 
 </LinearLayout>
+</android.support.v7.widget.CardView>
