@@ -14,6 +14,7 @@ import com.hack.ammadeu.MainScreenActivity
 import com.hack.ammadeu.R
 
 
+@SuppressLint("Registered")
 class MyFirebaseMessagingService : FirebaseMessagingService() {
     val TAG = "FirebaseMessagingService"
 
@@ -44,4 +45,6 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationManager.notify(0, notificationBuilder.build())
     }
+
+
 }

@@ -24,7 +24,7 @@ class SignUpActivity : AppCompatActivity() {
     val RC_SIGN_IN: Int = 1
     lateinit var mGoogleSignInClient: GoogleSignInClient
     lateinit var mGoogleSignInOptions: GoogleSignInOptions
-    val ID_WEB: String = "307788176529-tobra6eqakmrkg9lurtd0sij4ho5v1l9.apps.googleusercontent.com"
+    val ID_WEB: String = "ammadeu-ec0d9.firebaseapp.com"
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

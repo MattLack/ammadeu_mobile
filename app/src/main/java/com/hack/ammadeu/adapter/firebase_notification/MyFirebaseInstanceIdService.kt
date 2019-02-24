@@ -1,9 +1,11 @@
 package com.hack.ammadeu.adapter.firebase_notification
 
+import android.annotation.SuppressLint
 import android.util.Log
 import com.google.firebase.iid.FirebaseInstanceId
 import com.google.firebase.iid.FirebaseInstanceIdService
 
+@SuppressLint("Registered")
 class MyFirebaseInstanceIdService : FirebaseInstanceIdService() {
 
     val TAG = "PushNotifService"
