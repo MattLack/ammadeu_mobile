@@ -15,6 +15,7 @@ import com.hack.ammadeu.MainScreenActivity
 import com.hack.ammadeu.R
 import com.hack.ammadeu.adapter.ProcessAdapter
 import com.hack.ammadeu.model.Process
+import kotlinx.android.synthetic.main.fragment_process.*
 import kotlinx.android.synthetic.main.list_layout.*
 
 class FragmentProcess : Fragment() {
@@ -53,9 +54,9 @@ class FragmentProcess : Fragment() {
 
                     mAdapter = ProcessAdapter(notesList, requireContext())
                     val mLayoutManager = LinearLayoutManager(requireContext())
-                    list_process.layoutManager = mLayoutManager
-                    list_process.itemAnimator = DefaultItemAnimator()
-                    list_process.adapter = mAdapter
+                    list_processs.layoutManager = mLayoutManager
+                    list_processs.itemAnimator = DefaultItemAnimator()
+                    list_processs.adapter = mAdapter
                 } else {
                     Log.d(TAG, "Error getting documents: ", task.exception)
                 }
