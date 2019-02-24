@@ -80,15 +80,9 @@
                 android:paddingTop="7dp"
                 android:id="@+id/office"/>
 
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
 
-        <ListView
-                android:id="@+id/taks_list"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        >
-
-        </ListView>
+        </LinearLayout>
 
         <Button
                 android:layout_width="wrap_content"

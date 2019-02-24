@@ -37,7 +37,7 @@ class FragmentProcess : Fragment() {
     }
 
     private fun loadNotesList() {
-        firestoreDB!!.collection("Post")
+        firestoreDB!!.collection("Posts")
             .get()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
