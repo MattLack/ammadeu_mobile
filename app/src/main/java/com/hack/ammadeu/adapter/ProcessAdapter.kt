@@ -49,7 +49,7 @@ class ProcessAdapter (
                 p0.daysRemaining.setBackgroundColor(Color.GREEN)
                 p0.daysRemaining.text = days.toString()
             }
-            days in 10..15 -> {
+            days in 5..10 -> {
                 p0.daysRemaining.setBackgroundColor(Color.YELLOW)
                 p0.daysRemaining.text = days.toString()
             }

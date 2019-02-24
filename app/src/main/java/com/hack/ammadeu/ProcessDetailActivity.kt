@@ -47,7 +47,7 @@ class ProcessDetailActivity : AppCompatActivity() {
             DaysRI in 10..15 -> {
                 tvdays_ramaining.setBackgroundColor(Color.GREEN)
             }
-            DaysRI in 10..15 -> {
+            DaysRI in 5..10 -> {
                 tvdays_ramaining.setBackgroundColor(Color.YELLOW)
             }
             else -> {
