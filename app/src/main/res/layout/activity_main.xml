@@ -11,7 +11,7 @@
     <android.support.v7.widget.LinearLayoutCompat
             android:layout_width="357dp"
             android:layout_height="111dp"
-            android:background="@drawable/logo"
+            android:background="@drawable/logorename"
             tools:ignore="MissingConstraints"
             android:id="@+id/linearLayoutCompat2"
             app:layout_constraintEnd_toEndOf="parent"
