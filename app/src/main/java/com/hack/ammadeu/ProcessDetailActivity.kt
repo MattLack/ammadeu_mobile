@@ -5,13 +5,13 @@ import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_process_detail.*
+import kotlinx.android.synthetic.main.process_detail_activity.*
 
 class ProcessDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_process_detail)
+        setContentView(R.layout.process_detail_activity)
 
         loadInformationsInScreen()
     }
