@@ -6,12 +6,7 @@
                 android:id="@+id/action_home"
                 android:title="HOME"
                 app:showAsAction="collapseActionView"/>
-
-        <item
-                android:id="@+id/action_Submit"
-                android:title="SUBMIT"
-                app:showAsAction="collapseActionView"/>
-
+        
         <item
                 android:id="@+id/action_about_us"
                 android:title="ABOUT"

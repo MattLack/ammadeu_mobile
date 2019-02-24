@@ -1,9 +1,11 @@
 package com.hack.ammadeu
 
 import android.content.Intent
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import kotlinx.android.synthetic.main.activity_process_detail.*
 
 class ProcessDetailActivity : AppCompatActivity() {
 
@@ -17,17 +19,41 @@ class ProcessDetailActivity : AppCompatActivity() {
 
     fun loadInformationsInScreen() {
 
-        val img = intent.getStringExtra("imgUrl")
+        val clientN = intent.getStringExtra("clientName")
+        val DaysR = intent.getStringExtra("daysRamaining")
+        val Discr = intent.getStringExtra("discrimination")
+        val oppo = intent.getStringExtra("opponent")
+        val priorit = intent.getStringExtra("priorityGrade")
+        val processN = intent.getStringExtra("processNumber")
+        val task = intent.getStringExtra("task")
+        val publicatDat = intent.getStringExtra("publicationDate")
 
 
-        val clientD = intent.getStringExtra("userClient")
-        val NumberD = intent.getStringExtra("phonenumber")
-        val textD = intent.getStringExtra("text")
+        tvDiscrimination.text = Discr
+        tvNameClient.text = clientN
+        tvGrPriorit.text = priorit
+        tvNOpositor.text = oppo
+        tvPublicationDate.text = publicatDat
+        tvTasks.text = task
+        tvNumProc.text = processN
+        tvdays_ramaining.text = DaysR
 
+       val DaysRI = DaysR.toString().toInt()
 
-        //tv_EntryEmail.text = clientD
-        //tv_EntryNumber.text = NumberD
-        //tv_comentDemand.text = textD
+        when {
+            DaysRI > 15 -> {
+                tvdays_ramaining.setBackgroundColor(Color.GREEN)
+            }
+            DaysRI in 10..15 -> {
+                tvdays_ramaining.setBackgroundColor(Color.GREEN)
+            }
+            DaysRI in 10..15 -> {
+                tvdays_ramaining.setBackgroundColor(Color.YELLOW)
+            }
+            else -> {
+                tvdays_ramaining.setBackgroundColor(Color.RED)
+            }
+        }
 
     }
 

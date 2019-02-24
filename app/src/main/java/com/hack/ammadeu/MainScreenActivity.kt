@@ -64,11 +64,11 @@ class MainScreenActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
             R.id.action_about_us -> {
                 fragmentManager.popBackStack("about", fragmentManager.backStackEntryCount + 1)
                 fragmentManager.beginTransaction().replace(R.id.fragment_main_screen, FragmentAbout()).commit()
-            }/*
-            R.id.action_upload -> {
-                val intent = Intent(applicationContext, UploadActivity::class.java)
+            }
+            R.id.action_Submit -> {
+                val intent = Intent(applicationContext, SubmitActivity::class.java)
                 startActivity(intent)
-            }*/
+            }
             else -> {
             }
         }

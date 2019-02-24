@@ -52,6 +52,7 @@ class FragmentProcess : Fragment() {
                         notesList.add(note)
                     }
 
+                    notesList.sortBy { it.daysRamaining }
                     mAdapter = ProcessAdapter(notesList, requireContext())
                     val mLayoutManager = LinearLayoutManager(requireContext())
                     list_processs.layoutManager = mLayoutManager
