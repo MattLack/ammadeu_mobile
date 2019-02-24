@@ -11,4 +11,6 @@
     <string name="tvconfirm_password">Confirm Password</string>
     <string name="tvsign_up">Sign Up</string>
     <string name="next">Next</string>
+    <string name="oab_number">OAB Number</string>
+    <string name="name">Name</string>
 </resources>
