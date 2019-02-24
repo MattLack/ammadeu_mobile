@@ -59,7 +59,7 @@ class MainScreenActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
         when (item.itemId) {
             R.id.action_home -> {
                 fragmentManager.popBackStack("home", fragmentManager.backStackEntryCount + 1)
-                fragmentManager.beginTransaction().replace(R.id.fragment_main_screen, FragmentHome()).commit()
+                fragmentManager.beginTransaction().replace(R.id.fragment_main_screen, FragmentProcess()).commit()
             }
             R.id.action_about_us -> {
                 fragmentManager.popBackStack("about", fragmentManager.backStackEntryCount + 1)
