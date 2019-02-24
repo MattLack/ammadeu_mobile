@@ -1,6 +1,8 @@
 package com.hack.ammadeu.adapter.firebase_notification
 
 import android.annotation.SuppressLint
+import android.app.Notification
+import android.app.NotificationChannel
 import android.util.Log
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
@@ -9,41 +11,68 @@ import android.media.RingtoneManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.graphics.BitmapFactory
+import android.graphics.Color
+import android.os.Build
 import android.support.v4.app.NotificationCompat
+import android.support.v4.app.NotificationManagerCompat
 import com.hack.ammadeu.MainScreenActivity
 import com.hack.ammadeu.R
 
 
-@SuppressLint("Registered")
-class MyFirebaseMessagingService : FirebaseMessagingService() {
-    val TAG = "FirebaseMessagingService"
 
-    @SuppressLint("LongLogTag")
+
+
+//@SuppressLint("Registered")
+class MyFirebaseMessagingService : FirebaseMessagingService() {
+
+    lateinit var builder : Notification.Builder
+    val TAG = "FirebaseMessagingService"
+    private val channelId = "com.hack.ammadeu"
+    private val description = "Just a description"
+
+    //@SuppressLint("LongLogTag")
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         Log.d(TAG, "Dikirim dari: ${remoteMessage.from}")
 
         if (remoteMessage.notification != null) {
-            showNotification(remoteMessage.notification?.title, remoteMessage.notification?.body)
+            this.createNotificationChannel()
+            showNotification(0,
+                remoteMessage.notification?.title, remoteMessage.notification?.body)
         }
     }
 
-    private fun showNotification(title: String?, body: String?) {
-        val intent = Intent(this, MainScreenActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        val pendingIntent = PendingIntent.getActivity(this, 0, intent,
-            PendingIntent.FLAG_ONE_SHOT)
+    private fun showNotification(id: Int,title: String?, body: String?) {
 
-        val soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
-        val notificationBuilder = NotificationCompat.Builder(this)
+        var builder = NotificationCompat.Builder(this, channelId)
             .setSmallIcon(R.mipmap.ic_launcher)
             .setContentTitle(title)
             .setContentText(body)
-            .setAutoCancel(true)
-            .setSound(soundUri)
-            .setContentIntent(pendingIntent)
+            .setStyle(NotificationCompat.BigTextStyle()
+                .bigText(body))
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
 
-        val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        notificationManager.notify(0, notificationBuilder.build())
+        with(NotificationManagerCompat.from(this)) {
+            notify(id, builder.build())
+        }
+
+
+    }
+    private fun createNotificationChannel() {
+        // Create the NotificationChannel, but only on API 26+ because
+        // the NotificationChannel class is new and not in the support library
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = "Any name"
+            //val descriptionText = getString(R.string.channel_description)
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel = NotificationChannel(this.channelId, name, importance).apply {
+                description = "We are just testing"
+            }
+            // Register the channel with the system
+            val notificationManager: NotificationManager =
+                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
     }
 
 

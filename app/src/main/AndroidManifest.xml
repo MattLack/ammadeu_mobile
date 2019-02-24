@@ -23,7 +23,7 @@
             tools:ignore="GoogleAppIndexingWarning">
 
 
-        <service android:name=".adapter.firebase_notification.MyFirebaseInstanceIdService">
+        <service android:name=".adapter.firebase_notification.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
